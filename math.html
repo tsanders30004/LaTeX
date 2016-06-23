@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>MathJax TeX Test Page</title>
+
+</head>
+<style>
+td {
+     text-align: center
+}
+body {
+     font-family: Georgia;
+}
+</style>
+<body>
+     <h1>The Unilateral $Z$ Transform</h1>
+     <p>The unilateral $Z$-transform of a sequence $x[n]$ is defined by the formula $$X(z) =\sum_{n=0}^{\infty}x[n]z^{-n}$$</p>
+     <table width="90%" border="1">
+          <tbody>
+               <tr>
+                    <td>$$x[n]$$</td>
+                    <td>$$X(z)$$</td>
+               </tr>
+               <tr>
+                    <td>$$\delta[n] = \begin{cases}1, & n = 0, \\ 0 & n \ne 0\end{cases}$$</td>
+                    <td>1</td>
+               </tr>
+               <tr>
+                    <td>$$u[n-N]= \begin{cases}1, & n \ge N \ge 0, \\ 0, & n < 0\end{cases}$$</td>
+                    <td>$$\frac{z^{-N}}{1-z^{-1}}$$</td>
+               </tr>
+               <tr>
+                    <td>$$a^n$$</td>
+                    <td>$$\frac{1}{1-az^{-1}}$$</td>
+               </tr>
+               <tr>
+                    <td>n</td>
+                    <td>$$\frac{z^{-1}}{(1-z^{-1})^2}$$</td>
+               </tr>
+               <tr>
+                    <td>$$na^n$$</td>
+                    <td>$$\frac{az^{-1}}{(1-az^{-1})^2}$$</td>
+               </tr>
+               <tr>
+                    <td>$$a^n \cos n \theta$$</td>
+                    <td>$$\frac{1-a \cos\theta z^{-1}}{1-2a \cos\theta z^{-1}+a^2 z^{-2}}$$</td>
+               </tr>
+               <tr>
+                    <td>$$a^n \sin n \theta$$</td>
+                    <td>$$\frac{a \sin\theta z^{-1}}{1-2a \cos\theta z^{-1}+a^2 z^{-2}}$$</td>
+               </tr>
+               <h1>The Fibonacci Sequence</h1>
+               <p>
+                    The Fibonacci Sequence is defined as $f[n] = {0, 1, 1, 2, 3, 5, 8, ...}$.  Each element of the sequence is the sum of the preceding two elements.
+               </p>
+               <p>The sequence appears surprising often in higher mathematics - and in nature.  The following natural phenomena are related to the Fibonacci Sequence:
+                    <ul>
+                         <li>Branching in trees</li>
+                         <li>Arragement of stems on a pineappe</li>
+                         <li>Arragement of bracts on a pine cone</li>
+                    </ul>
+               </p>
+               <p>Of particular interest to the author is the relationship of this sequence to the so-called Fibonacci Spiral, the shape of which occurs frequenly in architecure.
+                    This spiral is related the the Golden Spiral and the Golden Ratio.  In photography, subject placement is generally considered to be most pleasing if the xxxxx</p>
+                    <p>A curious characteristic of this sequence is that it appears so regularly in the sciences, and in artforms.  </p>
+
+                    Using mathematical notation commonly observed in signal processing, the sequence can be characterized with the following formula:
+
+                    $$f[n] = \frac{\varphi^n-(-\varphi)^{-n}}{2\varphi -1}$$
+
+                    <p>Extending the signal processing metaphor, it is possible to derive a closed form expression of the Fibonacci Sequence
+                         by applying the $Z$-Transform of a signal $f[n]$:</p>
+
+                         $$F(z) =\sum_{n=0}^{\infty}f[n]z^{-n}$$
+
+                         The forward shift propery of the $Z$-Transform stipulates that the $Z$-Transform of $f[n+1]$ is equal to $z(F(z)-f[0])$.
+                         By applying this property to the Fibonacci Sequence $f[n]$ shows, after a lot of messy algebra, that the $n{th}$ element of the sequence
+                         can be non-recursively calculated as
+                         $f[n] = \frac{\varphi^n-(-\varphi)^{-n}}{2\varphi -1}$ where $\varphi=\frac{1+\sqrt{5}}{2}$.
+                    </tbody>
+               </table>
+               <script type="text/x-mathjax-config">
+               MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+               </script>
+               <script type="text/javascript" async
+               src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+               </script>
+
+          </body>
+          </html>
